@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styling */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #5C4033;
+            font-family: Segoe Script;
+        }
+        /* Logo Styling */
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
+
+        /* Navigation Styling */
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+	nav a:hover {
+   	    color: #5C4033; 
+    	    text-decoration: underline; 
+    	    text-decoration-color: #5C4033; 
+    	    text-underline-offset: 3px; 
+        }
+
+        .hero {
+            position: relative;
+            background-image: url('imagefinal/heropic.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.3);
+            color: #D2AF37;
+        }
+
+        .history-section {
+            background-color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .history-content h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+            color: #5C4033;
+            font-family: Brush Script MTS;
+        }
+
+        .history-content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* About Us Section */
+        .about-us {
+            padding: 40px;
+            background-color: #f7f7f7;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us h1 {
+            font-size: 36px;
+            color: #5C4033;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+	.animate-on-scroll {
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: all 1.0s ease-in-out;
+}
+.animate-on-scroll.visible {
+    opacity: 15; 
+    transform: translateY(0);
+}
+        /* Mobile Responsiveness */
+        @media only screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo img {
+                height: 60px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .about-us {
+                padding: 20px;
+            }
+
+            .about-us h1 {
+                font-size: 28px;
+            }
+
+            .hero {
+                height: 300px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo animate-on-scroll">
+            <img src="imagefinal/lustre.jpg" alt="Logo">
+            Lustre Lane.
+        </div>
+        <nav class="logo animate-on-scroll">
+            <a href="index.html">Blog</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="collections.html">Collections</a>
+            <a href="shop.html">Shop</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <h1 class="animate-on-scroll">Discover timeless jewellery at Lustre Lane</h1>
+
+    </section>
+
+    <!-- History Section -->
+    <section class="history-section animate-on-scroll" id="history">
+        <div class="history-content">
+            <h2>The Story Behind Us</h2>
+            <p>
+                Four women, each with a deep love for accessories like bracelets, necklaces, earrings, and more, came together with a shared passion for elegance and empowerment. They believed that every piece of jewelry had the power to transform not only an outfit but also a woman’s confidence. Inspired by their dream of helping women feel more beautiful and self-assured, they decided to channel their creativity into a business.
+            </p>
+            <p>
+                But their mission went beyond just selling jewelry. They wanted their brand to represent empowerment and connection. They launched campaigns that showcased real women of diverse backgrounds and hosted workshops that taught styling tips and shared inspiring stories. Their business became more than a store—it became a community.
+            </p>
+            <p>
+                Through their work, the four women reminded others that beauty is not about perfection but about confidence and authenticity. They believed that every woman deserved to feel like the masterpiece she was, and with every bracelet clasped, necklace worn, or ring adorned, they hoped to spark a little more confidence in women everywhere.
+            </p>
+            <p>
+                What started as a shared love for accessories grew into a movement—one that encouraged women to shine, both inside and out.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us animate-on-scroll">
+        <h1>Logo Meaning</h1>
+        <p>Welcome to My Website! We are a team dedicated to providing exceptional services and experiences to our clients. Our mission is to help individuals and businesses succeed by delivering reliable and innovative solutions.</p>
+        <p>With years of experience in the industry, we have built a reputation for excellence. We pride ourselves on our professional approach, commitment to quality, and passion for continuous improvement.</p>
+        <p>Whether you're looking for expert advice, tailored services, or simply want to learn more about what we do, you're in the right place!</p>
+    </section>
+
+<script>
+        // Function to check if an element is in the viewport
+        const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+        function checkVisibility() {
+            elementsToAnimate.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Listen for scroll events to check visibility
+        window.addEventListener('scroll', checkVisibility);
+
+        // Call the function on page load to check for already visible elements
+        window.addEventListener('load', checkVisibility);
+    </script>
+
+
+
+    <footer>
+        <p>&copy; 2025 Lustre Lane. All rights reserved.</p>
+    </footer>
+</body>
+</html>
