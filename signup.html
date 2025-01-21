@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up & Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #D9BB9B;
+    }
+    .container {
+      position: relative;
+      width: 400px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    .form {
+      display: none;
+    }
+    .form.active {
+      display: block;
+    }
+    .form h2 {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .form input, .form select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #5C4033;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .form button:hover {
+      background-color: #D9BB9B;
+    }
+    .form a {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      color: #007bff;
+      cursor: pointer;
+    }
+    .thank-you-message {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+    .back-button {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 4px;
+      width: 100%;
+      cursor: pointer;
+    }
+    .back-button:hover {
+      background-color: #bbb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sign Up Form -->
+    <div id="signupForm" class="form active">
+      <h2>Member Registration</h2>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Repeat your password" required>
+      
+      <!-- Phone Number -->
+      <div style="display: flex; gap: 10px;">
+        <select required>
+          <option value="+60">+60 (Malaysia)</option>
+          <option value="+65">+65 (Singapore)</option>
+          <option value="+66">+66 (Thailand)</option>
+          <option value="+673">+673 (Brunei)</option>
+          <option value="+82">+82 (South Korea)</option>
+  	  <option value="+81">+81 (Japan)</option>
+  	  <option value="+84">+84 (Vietnam)</option>
+ 	  <option value="+1">+1 (Canada)</option>
+        </select>
+        <input type="tel" placeholder="Phone Number" required>
+      </div>
+
+      <!-- Country -->
+      <select required>
+        <option value="" disabled selected>Select Your Country</option>
+        <option value="Malaysia">Malaysia</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Thailand">Thailand</option>
+        <option value="Brunei">Brunei</option>
+	<option value="South Korea">South Korea</option>
+	<option value="Japan">Japan</option>
+	<option value="Vietnam">Vietnam</option>
+	<option value="Canada">Canada</option>
+      </select>
+      
+      <label style="display: inline-flex; align-items: center; font-size: 12px">
+  <input type="checkbox">
+  Remember me
+      </label>
+
+      <button id="registerButton">Register</button>
+      <a id="showLogin" href="#">I am already a member</a>
+      <p class="thank-you-message" id="thankYouMessage">Thank you, you are already registered!</p>
+    </div>
+
+    <!-- Login Form -->
+    <div id="loginForm" class="form">
+      <h2>Log In</h2>
+      <input type="email" placeholder="Your Email" required>
+      <input type="password" placeholder="Password" required>
+      <button>Login</button>
+      <a id="showSignup" href="#">Create a new account</a>
+    </div>
+  </div>
+
+  <script>
+    // Toggle Forms
+    const signupForm = document.getElementById('signupForm');
+    const loginForm = document.getElementById('loginForm');
+    const showLogin = document.getElementById('showLogin');
+    const showSignup = document.getElementById('showSignup');
+    const registerButton = document.getElementById('registerButton');
+    const thankYouMessage = document.getElementById('thankYouMessage');
+
+    showLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      signupForm.classList.remove('active');
+      loginForm.classList.add('active');
+    });
+
+    showSignup.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginForm.classList.remove('active');
+      signupForm.classList.add('active');
+    });
+
+    // Show Thank You Message
+    registerButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      thankYouMessage.style.display = 'block';
+      setTimeout(() => {
+        thankYouMessage.style.display = 'none';
+      }, 3000); // Hide the message after 3 seconds
+    });
+  </script>
+
+<section>
+<button id="backButton" class="back-button" onclick="window.location.href='index.html'">Back</button>
+</section>
+
+</body>
+</html>
