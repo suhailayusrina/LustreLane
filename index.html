@@ -23,6 +23,7 @@
             padding: 20px;
             background-color: white;
             border-bottom: 1px solid #ddd;
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
         .logo {
@@ -133,7 +134,7 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: transparent;
+            background-color: #5C4033;
             color: black;
             border: 1px solid gray;
             text-transform: uppercase;
@@ -144,7 +145,7 @@
         }
 
         .subscribe:hover {
-            background-color: #5C4033;
+            background-color: transparent;
             color: white;
         }
 	.modal {
@@ -218,14 +219,14 @@
             font-size: 12px;
         }
 .history-section {
-    background-color: white; /* White background */
-    padding: 50px 20px; /* Add padding around the section */
-    text-align: center; /* Center the text */
+    background-color: white;
+    padding: 50px 20px; 
+    text-align: center; 
 }
 
 .history-content h2 {
-    font-size: 32px; /* Heading font size */
-    color: #333; /* Dark color for the heading */
+    font-size: 32px; 
+    color: #333; 
     margin-bottom: 20px;
     color: #5C4033;
     font-family: Brush Script MTS;
@@ -327,6 +328,7 @@ h1, h2 {
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
             display: none; 
 	    color: #5C4033;
+	    line-height: 1.7;
         }
         img {
             max-width: 100%;
@@ -351,11 +353,104 @@ h1, h2 {
             background: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.0);
 	    color: #5C4033;
+	    line-height: 1.7;
         }
         .top-articles h2 {
             margin-top: 0;
+        }
+footer {
+    background-color: #ffff;
+    padding: 40px 20px;
+    border-top: 1px solid #e0e0e0;
+    position: relatives;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #5C4033;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+    font-size: 14px
+}
+
+.footer-section ul li a:hover {
+    color: #D9BB9B;
+    text-decoration: underline;
+}
+
+.footer-social {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.footer-social h4 {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+
+.tooltip-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            background-color: #333;
+            color: #D9BB9B;
+            text-align: center;
+            border-radius: 5px;
+            padding: 9px;
+            position: absolute;
+            bottom: 50%;
+            left: 100%;
+            transform: translateX(-100%);
+            z-index: 1;
+            white-space: nowrap;
+            font-size: 14px;
+	    transition: opacity 1.0s ease, transform 1.0s ease; 
+        }
+
+        .tooltip-container:hover .tooltip-text {
+            visibility: visible;
+	    transform: translateX(-100%) translateY(-5px);
         }
 @media only screen and (max-width: 768px) {
             header {
@@ -460,7 +555,12 @@ h1, h2 {
         </div>
     </section>
 
-<center><img src="imagefinal/lustre.jpg" alt="logo"></center>
+<center>
+<div class="tooltip-container">
+        <img src="imagefinal/lustre.jpg" alt="logo">
+        <div class="tooltip-text">Go to <b>About Us</b> page </div>
+    </div>
+</center>
 
 <section class="welcome-section" data-aos="fade-right">
         <div class="welcome-text">
@@ -475,12 +575,12 @@ h1, h2 {
             <button class="subscribe"  id="subscribeBtn">Subscribe</button>
         </div>
 
-<div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Thank you for subscribing our blog! Love you ❤️ </p>
-        </div>
-    </div>
+<script>
+        // Add event listener to the button
+        document.getElementById("subscribeBtn").addEventListener("click", function() {
+            alert("Thank you for subscribing! Stay tuned for updates.");
+        });
+    </script>
 
 <script>
         var modal = document.getElementById("myModal");
@@ -510,7 +610,7 @@ h1, h2 {
 
 <br>
 <br>
-<center><h1 style="color: #5C4033; font-family: 'Segoe Script'; text-decoration: underline;" data-aos="fade-down">Explore the article</h1></center>
+<center><h1 style="color: #5C4033; font-family: 'Segoe Script'; text-decoration: underline;" data-aos="fade-down">Explore the articles</h1></center>
 
 <br>
 <br>
@@ -669,6 +769,8 @@ h1, h2 {
                 <p>About Us</p>
             </div>
 
+<br>
+
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
@@ -678,6 +780,54 @@ h1, h2 {
         });
     </script>
 
+<footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Jewellery Articles</a></li>
+                    <li><a href="#">Fine Jewellery</a></li>
+                    <li><a href="#">Jewellery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="signup.html">My Account</a></li>
+                    <li><a href="#">Jewellery Care</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Materials</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Social Media</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Lustre Lane</h4>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="shops.html">Shops</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/"><img src="imagefinal/ig.jpg" alt="Instagram"></a>
+                <a href="https://www.tiktok.com/"><img src="imagefinal/tiktok.jpg" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+    <center><footer>
+        <p>&copy; 2025 Lustre Lane. All rights reserved.</p>
+    </footer></center>
 </body>
 </html>
 
@@ -701,7 +851,7 @@ h1, h2 {
       padding: 15px 20px;
       font-size: 20px;
       cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 6px rgba(5, 5, 5, 0.7);
       display: none; /* Hidden by default */
       z-index: 1000;
     }
