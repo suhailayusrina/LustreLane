@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jewelry Collection</title>
+    <title>Lustre Collections</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
 	body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #D9BB9B;
+            background-color: #fff;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
@@ -23,6 +24,11 @@
             background-color: #fff;
             border-bottom: 2px solid #ddd;
 	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	    position: fixed;
+    	    top: 0; 
+    	    left: 0; 
+   	    width: 100%;
+	    z-index: 1000;
         }
         .logo {
             font-size: 30px;
@@ -40,6 +46,7 @@
             display: flex;
             gap: 30px;
             align-items: center;
+	    margin-right: 30px;
         }
 
         nav a {
@@ -57,12 +64,12 @@
 
 	.video-container {
             display: flex;
-            gap: 20px;
+            gap: 28px;
             justify-content: center; 
             align-items: center; 
         }
         video {
-            width: 600px;
+            width: 800px;
             height: auto;
             background: black;
 	}
@@ -116,10 +123,10 @@
 
         .card {
             background-color: #fff;
-            border: 1px solid #ddd;
+            border: 6px solid #D9BB9B;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(3, 2, 2, 0.6);
             text-align: center;
             transition: transform 0.3s ease;
         }
@@ -133,14 +140,168 @@
         .card .card-text {
             padding: 15px;
             font-size: 14px;
-            color: #333;
+            font-weight: bold;
+            color: #5C4033;
+	    font-family: Brush Script MTS;
         }
 
         .card:hover {
-            transform: translateY(-10px); /* Lift effect */
+            transform: translateY(-10px);
+        }
+        .history-section {
+            background-color: white;
+            padding: 50px 20px;
+            text-align: center;
         }
 
+        .history-content h2 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+            color: #5C4033;
+            font-family: Brush Script MTS;
+        }
+
+        .history-content p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+.shop-now-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px; 
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5C4033;
+    background-color: #D9BB9B; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.shop-now-btn .arrow {
+    font-size: 18px; 
+    transition: margin-left 0.3s ease;
+}
+.shop-now-btn:hover .arrow {
+    margin-left: 10px;
+}
+.container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 2rem;
+        }
+        .feature {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+	    transition: transform 0.8s ease;
+	}
+	.feature:hover {
+            transform: scale(1.2);
+        }
+        .feature i {
+            font-size: 2rem;
+	    color: #5C4033;
+            margin-bottom: 0.5rem;
+        }
+        .feature h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .feature p {
+            color: #6b7280;
+        }
+footer {
+    background-color: #ffff;
+    padding: 40px 20px;
+    border-top: 1px solid #e0e0e0;
+    position: relatives;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #5C4033;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #555;
+    transition: color 0.3s;
+    font-size: 14px
+}
+
+.footer-section ul li a:hover {
+    color: #D9BB9B;
+    text-decoration: underline;
+}
+
+.footer-social {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.footer-social h4 {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+}
+.animate-on-scroll {
+    opacity: 0; 
+    transform: translateY(20px); 
+    transition: all 0.5s ease-in-out;
+}
+.animate-on-scroll.visible {
+    opacity: 30; 
+    transform: translateY(0);
+}
     </style>
+</head>
+<head>
+    <link rel="icon" href="imagefinal/lustre.jpg" type="image/jpeg">
 </head>
 <body>
     <!-- Header Section -->
@@ -161,7 +322,10 @@
 <br>
 <br>
 <br>
-<center><div class="video-container">
+<br>
+<br>
+
+<center><div class="video-container animate-on-scroll">
         <video class="video" muted playsinline loop data-aos="fade-up">
             <source src="videofinal/jewel2.mp4" type="video/mp4">
 	    <source src="videofinal/jewel2.ogg" type="video/ogg">
@@ -193,7 +357,7 @@
 <br>
 <br>
 <br>
-<div class="slider-container">
+<div class="slider-container animate-on-scroll">
         <div class="slider-wrapper" id="sliderWrapper">
             <img src="imagefinal/anting.jpg" alt="Image 1">
             <img src="imagefinal/cincin2.jpg" alt="Image 2">
@@ -263,33 +427,49 @@
     </script>
 
 <br>
+    <section class="history-section" id="history">
+        <div class="history-content">
+            <h2>Our Collections: Where Elegance Meets Craftsmanship</h2>
+            <p>
+Our collection includes a stunning variety of jewelry that caters to every occasion and personal preference. Whether you're looking for exquisite rings, dazzling earrings, or charming bracelets, Lustre Lane has something for everyone. Our rings range from dainty designs that add subtle elegance to bold statement pieces that stand out in any crowd. Earrings come in classic studs, glamorous hoops, or intricate danglers, designed to frame your natural beauty. Bracelets, crafted with intricate details, are perfect for layering or wearing solo, while our necklaces offer options from minimalist pendants to elaborate statement pieces that enhance your neckline. For a touch of tradition with a contemporary twist, our bangles add grace to your everyday or festive attire. Additionally, we offer a wide variety of jewelry, including anklets, charms, brooches, and much more—each piece crafted to perfection.
+            </p>
+            <p>
+               Every piece in our collection is created with care and precision by skilled artisans. We prioritize durability without ever compromising on aesthetics. Each item undergoes rigorous quality checks to ensure it meets our high standards of excellence, so you can trust that your jewelry will remain as beautiful as the day you first wore it. Our gemstones, including diamonds, sapphires, and emeralds, are carefully handpicked and polished to perfection, while our cultured pearls exude natural beauty and sophistication. For lightweight yet durable everyday wear, we also incorporate modern alloys that combine practicality with elegance.
+            </p>
+            <p>
+                At Lustre Lane, our designs are inspired by a blend of classic elegance and modern trends. Whether you're searching for a timeless piece to add to your heirloom collection or a trendy accessory to elevate your everyday look, our collections are designed to cater to diverse tastes and preferences. Our jewelry is more than just an accessory; it’s an expression of your unique story. Whether you’re celebrating love, success, or simply indulging in a well-deserved treat, Lustre Lane has a piece to match every moment of your journey. Explore our collections today and discover how Lustre Lane can add a touch of brilliance to your life.
+            </p>
+        </div>
+    </section>
+<br>
+<br>
 <br>
     <div class="card-container">
         <div class="card">
-            <img src="imagefinal/anting.jpg" alt="Image 1">
-            <div class="card-text">Elegant Earrings</div>
+            <img src="imagefinal/earing.jpg" alt="Image 1">
+            <div class="card-text">Goldy Earings</div>
         </div>
         <div class="card">
-            <img src="imagefinal/cincin2.jpg" alt="Image 2">
-            <div class="card-text">Stylish Ring</div>
+            <img src="imagefinal/anting.jpg" alt="Image 2">
+            <div class="card-text">Plenty Earings</div>
         </div>
         <div class="card">
-            <img src="imagefinal/anting3.jpg" alt="Image 3">
-            <div class="card-text">Classic Jewelry</div>
+            <img src="imagefinal/anting4.jpg" alt="Image 3">
+            <div class="card-text">Pearly Earings</div>
         </div>
         <div class="card">
-            <img src="imagefinal/cincin4.jpg" alt="Image 4">
-            <div class="card-text">Luxury Ring</div>
+            <img src="imagefinal/anting2.jpg" alt="Image 4">
+            <div class="card-text">Daisy Earings</div>
         </div>
         <div class="card">
-            <img src="imagefinal/bracelet.jpg" alt="Image 5">
-            <div class="card-text">Charming Bracelet</div>
+            <img src="imagefinal/anting3.jpg" alt="Image 5">
+            <div class="card-text">Elena Earings</div>
         </div>
     </div>
 
-    <div class="card-container">
+    <div class="card-container animate-on-scroll">
         <div class="card">
-            <img src="imagefinal/anting.jpg" alt="Image 1">
+            <img src="imagefinal/ring.jpg" alt="Image 1">
             <div class="card-text">Elegant Earrings</div>
         </div>
         <div class="card">
@@ -297,7 +477,7 @@
             <div class="card-text">Stylish Ring</div>
         </div>
         <div class="card">
-            <img src="imagefinal/anting3.jpg" alt="Image 3">
+            <img src="imagefinal/ringmodel2.jpg" alt="Image 3">
             <div class="card-text">Classic Jewelry</div>
         </div>
         <div class="card">
@@ -305,36 +485,239 @@
             <div class="card-text">Luxury Ring</div>
         </div>
         <div class="card">
-            <img src="imagefinal/bracelet.jpg" alt="Image 5">
+            <img src="imagefinal/cincin.jpg" alt="Image 5">
             <div class="card-text">Charming Bracelet</div>
         </div>
     </div>
-    <div class="card-container">
+    <div class="card-container animate-on-scroll">
         <div class="card">
-            <img src="imagefinal/anting.jpg" alt="Image 1">
-            <div class="card-text">Elegant Earrings</div>
+            <img src="imagefinal/avocado.jpg" alt="Image 1">
+            <div class="card-text">Avocado Necklace</div>
         </div>
         <div class="card">
-            <img src="imagefinal/cincin2.jpg" alt="Image 2">
-            <div class="card-text">Stylish Ring</div>
+            <img src="imagefinal/necklacemodel.jpg" alt="Image 2">
+            <div class="card-text">Pearl Necklace</div>
         </div>
         <div class="card">
-            <img src="imagefinal/anting3.jpg" alt="Image 3">
-            <div class="card-text">Classic Jewelry</div>
+            <img src="imagefinal/emerald.jpg" alt="Image 3">
+            <div class="card-text"> Diana Heart</div>
         </div>
         <div class="card">
-            <img src="imagefinal/cincin4.jpg" alt="Image 4">
-            <div class="card-text">Luxury Ring</div>
+            <img src="imagefinal/heidi.jpg" alt="Image 4">
+            <div class="card-text">Heidi Rose Gold</div>
         </div>
         <div class="card">
-            <img src="imagefinal/bracelet.jpg" alt="Image 5">
-            <div class="card-text">Charming Bracelet</div>
+            <img src="imagefinal/layered.jpg" alt="Image 5">
+            <div class="card-text">Layered Necklace</div>
         </div>
     </div>
+    <div class="card-container animate-on-scroll">
+        <div class="card">
+            <img src="imagefinal/bracelet.jpg" alt="Image 1">
+            <div class="card-text">Layered Bracelet</div>
+        </div>
+        <div class="card">
+            <img src="imagefinal/bracelet2.jpg" alt="Image 2">
+            <div class="card-text">Seashell Bracelet</div>
+        </div>
+        <div class="card">
+            <img src="imagefinal/redbeads.jpg" alt="Image 3">
+            <div class="card-text"> Red Beads</div>
+        </div>
+        <div class="card">
+            <img src="imagefinal/bracelet3.jpg" alt="Image 4">
+            <div class="card-text">White Daisy</div>
+        </div>
+        <div class="card">
+            <img src="imagefinal/bracelet1.jpg" alt="Image 5">
+            <div class="card-text">Flowery Necklace</div>
+        </div>
+    </div>
+    <div class="card-container animate-on-scroll">
+        <div class="card">
+            <img src="imagefinal/bangle1.jpg" alt="Image 1">
+            <div class="card-text">Twisted Bangle</div>
+        </div>
+        <div class="card">
+            <img src="imagefinal/banglegold.jpg" alt="Image 2">
+            <div class="card-text">Gold Bangle</div>
+        </div>
+        <div class="card">
+            <img src="imagefinal/simplebangle.jpg" alt="Image 3">
+            <div class="card-text"> Minimalist</div>
+        </div>
+        <div class="card">
+            <img src="imagefinal/banglerose.jpg" alt="Image 4">
+            <div class="card-text">Rose Gold Bangle</div>
+        </div>
+        <div class="card">
+            <img src="imagefinal/banglesliver.jpg" alt="Image 5">
+            <div class="card-text">Silver Bangle</div>
+        </div>
+    </div>
+<br>
 <br>
 
+<center><a href="shop.html" class="shop-now-btn animate-on-scroll">
+    Shop Now <span class="arrow">&rarr;</span>
+</a></center>
+
 <br>
+<div class="container">
+        <div class="features">
+            <div class="feature">
+                <i class="fas fa-box-open"></i>
+                <h3>Free Shipping</h3>
+                <p>We Ship Worldwide</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-percent"></i>
+                <h3>0% Interest</h3>
+                <p>Buy Now, Pay Later.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-credit-card"></i>
+                <h3>Flexible Payment</h3>
+                <p>Mastercard | Visa | TnG</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-leaf"></i>
+                <h3>Sustainable Packaging</h3>
+                <p>Our Packaging</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-ring"></i>
+                <h3>Affordable Jewelry</h3>
+                <p>About Us</p>
+            </div>
+
+<script>
+        // Function to check if an element is in the viewport
+        const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+        function checkVisibility() {
+            elementsToAnimate.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Listen for scroll events to check visibility
+        window.addEventListener('scroll', checkVisibility);
+
+        // Call the function on page load to check for already visible elements
+        window.addEventListener('load', checkVisibility);
+    </script>
+
 <br>
+<footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Jewellery Articles</a></li>
+                    <li><a href="#">Fine Jewellery</a></li>
+                    <li><a href="#">Jewellery</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Customer Care</h4>
+                <ul>
+                    <li><a href="signup.html">My Account</a></li>
+                    <li><a href="#">Jewellery Care</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Materials</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Social Media</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Lustre Lane</h4>
+                <ul>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="index.html">Blog</a></li>
+                    <li><a href="collections.html">Collections</a></li>
+                    <li><a href="shops.html">Shops</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/"><img src="imagefinal/ig.jpg" alt="Instagram"></a>
+                <a href="https://www.tiktok.com/"><img src="imagefinal/tiktok.jpg" alt="TikTok"></a>
+            </div>
+        </div>
+    </footer>
+    <center><footer>
+        <p>&copy; 2025 Lustre Lane. All rights reserved.</p>
+    </footer></center>
 
 </body>
 </html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Back to Top Button</title>
+  <style>
+
+    /* Back to Top Button Style */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #D9BB9B;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 15px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(5, 5, 5, 0.7);
+      display: none; /* Hidden by default */
+      z-index: 1000;
+    }
+
+    .back-to-top:hover {
+      background-color: #5C4033;
+    }
+  </style>
+</head>
+<body>
+
+
+ <button class="back-to-top" id="backToTop">↑</button>
+
+
+  <script>
+    // Get the button element
+    const backToTopButton = document.getElementById('backToTop');
+
+    // Show or hide the button based on scroll position
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) { // Show after scrolling 200px
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    });
+
+    // Scroll back to top when the button is clicked
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
