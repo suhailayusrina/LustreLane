@@ -10,7 +10,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding-top: 100px;
             box-sizing: border-box;
             overflow-x: hidden;
         }
@@ -23,6 +23,11 @@
             background-color: white;
             border-bottom: 1px solid #ddd;
 	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	    position: fixed;
+    	    top: 0; 
+    	    left: 0; 
+   	    width: 100%;
+	    z-index: 1000;
         }
 
         .logo {
@@ -43,7 +48,8 @@
     	    gap: 30px;
     	    transition: color 10s ease;
     	    align-items: center;
-}
+	    margin-right: 30px;
+	}
 
 	nav a {
     	    text-decoration: none; 
@@ -51,27 +57,50 @@
     	    font-size: 14px;
             transition: background 0.5s;
 	    font-family: Segoe Script;
-}
+	}
 
 	nav a:hover {
    	    color: #5C4033; 
     	    text-decoration: underline; 
     	    text-decoration-color: #5C4033; 
     	    text-underline-offset: 3px; 
-}
+	}        
+	.hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
 
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-nav a {
+            font-size: 18px;
+            text-align: left;
+        }
 
         .register {
-    display: inline-block;
-    text-align: center;
-    background-color: #5C4033;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 30px;
-    text-decoration: none; /* Removes the underline */
-    cursor: pointer;
-    transition: color 0.3s ease, background-color 0.3s ease;
+ 	   display: inline-block;
+	   text-align: center;
+     	   background-color: #5C4033;
+    	   color: white;
+     	   padding: 8px 16px;
+    	   border: none;
+    	   border-radius: 30px;
+    	   text-decoration: none; /* Removes the underline */
+    	   cursor: pointer;
+    	   transition: color 0.3s ease, background-color 0.3s ease;
+	   margin-right: 30px;
 }
 
 .register:hover {
@@ -430,9 +459,15 @@ footer {
             }
 
             nav {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .mobile-nav {
+                display: flex;
             }
 
             .blog-content {
@@ -505,6 +540,16 @@ footer {
         </div>
     </header>
 </body>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileNav.style.display = mobileNav.classList.contains('active') ? 'flex' : 'none';
+        });
+    </script>
 
     <section class="blog-content" data-aos="fade-up">
         <div class="blog-item">

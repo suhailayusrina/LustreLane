@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding-top: 80px;
             box-sizing: border-box;
             background-color: #fff;
             overflow-x: hidden;
@@ -59,6 +59,29 @@
     	    text-decoration: underline; 
     	    text-decoration-color: #5C4033; 
     	    text-underline-offset: 3px; 
+        }
+	.hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-nav a {
+            font-size: 18px;
+            text-align: left;
         }
 
         .hero {
@@ -270,8 +293,15 @@ footer {
             }
 
             nav {
-                flex-direction: column;
-                gap: 15px;
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .mobile-nav {
+                display: flex;
             }
 
             .about-us {
@@ -289,7 +319,37 @@ footer {
             .hero h1 {
                 font-size: 28px;
             }
-        }
+	    .about-us {
+        padding: 20px;
+        border-radius: 30px;
+    }
+
+    .about-us h1 {
+        font-size: 24px;
+    }
+
+    .gallery-item {
+        width: 48%;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .footer-section {
+        margin: 20px 0;
+    }
+}
 
     </style>
 </head>
@@ -311,6 +371,16 @@ footer {
             <a href="#">Contact</a>
         </nav>
     </header>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileNav.style.display = mobileNav.classList.contains('active') ? 'flex' : 'none';
+        });
+    </script>
 
     <!-- Hero Section -->
     <section class="hero" id="hero">

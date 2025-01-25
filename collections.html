@@ -9,7 +9,7 @@
 	body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding-top: 80px;
             box-sizing: border-box;
             background-color: #fff;
             overflow-x: hidden;
@@ -60,6 +60,29 @@
     	    text-decoration: underline; 
     	    text-decoration-color: #5C4033; 
     	    text-underline-offset: 3px; 
+        }
+	.hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-nav a {
+            font-size: 18px;
+            text-align: left;
         }
 
 	.video-container {
@@ -298,6 +321,51 @@ footer {
     opacity: 30; 
     transform: translateY(0);
 }
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+
+    .video-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    video {
+        width: 100%;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .slider-container {
+        max-width: 100%;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
     </style>
 </head>
 <head>
@@ -319,6 +387,15 @@ footer {
         </nav>
     </header>
 
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileNav.style.display = mobileNav.classList.contains('active') ? 'flex' : 'none';
+        });
+    </script>
 <br>
 <br>
 <br>
