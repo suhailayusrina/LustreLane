@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Ratings - Lustre Lane</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FDF9F6;
+      color: #5C4033;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .rating {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .stars {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .stars span {
+      font-size: 30px;
+      cursor: pointer;
+      color: #D9BB9B;
+    }
+    .stars span.selected {
+      color: #5C4033;
+    }
+    textarea {
+      width: 100%;
+      height: 100px;
+      border: 1px solid #D9BB9B;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 20px;
+      resize: none;
+    }
+    button {
+      background-color: #5C4033;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #D9BB9B;
+    }
+    .thank-you {
+      display: none;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 18px;
+      color: #5C4033;
+    }
+    .feedback-gallery {
+      margin-top: 40px;
+    }
+    .feedback-gallery h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .feedback-item {
+      background-color: #fff;
+      border: 1px solid #D9BB9B;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .feedback-item .rating {
+      font-size: 18px;
+      color: #D9BB9B;
+    }
+    .feedback-item .comment {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #5C4033;
+    }
+    .feedback-item .date {
+      font-size: 14px;
+      color: #888;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Rate Your Experience</h2>
+    <div class="rating">
+      <div class="stars" id="stars">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+      </div>
+      <textarea id="feedback" placeholder="Leave your feedback..."></textarea>
+      <button onclick="submitRating()">Submit</button>
+      <div class="thank-you" id="thankYouMessage">Thank you for your feedback!</div>
+    </div>
+
+    <div class="feedback-gallery" id="feedbackGallery">
+      <h3>Customer Feedback</h3>
+      <!-- Feedback items will be dynamically added here -->
+    </div>
+  </div>
+
+  <script>
+    const stars = document.querySelectorAll(".stars span");
+    let selectedRating = 0;
+    const feedbackGallery = document.getElementById("feedbackGallery");
+
+    // Mock historical feedback data
+    const historicalFeedback = [
+      {
+        rating: 5,
+        comment: "The ring I purchased is stunning! Exceptional quality.",
+        date: "2022-03-15",
+      },
+      {
+        rating: 4,
+        comment: "Loved the necklace, but delivery was slightly delayed.",
+        date: "2023-06-20",
+      },
+      {
+        rating: 3,
+        comment: "The bracelet was nice, but the packaging could be better.",
+        date: "2021-11-05",
+      },
+    ];
+
+    // Display historical feedback
+    function displayHistoricalFeedback() {
+      historicalFeedback.forEach((feedback) => {
+        const feedbackItem = document.createElement("div");
+        feedbackItem.classList.add("feedback-item");
+
+        const ratingElement = document.createElement("div");
+        ratingElement.classList.add("rating");
+        ratingElement.textContent = `Rating: ${"★".repeat(feedback.rating)}${"☆".repeat(5 - feedback.rating)}`;
+
+        const commentElement = document.createElement("div");
+        commentElement.classList.add("comment");
+        commentElement.textContent = `"${feedback.comment}"`;
+
+        const dateElement = document.createElement("div");
+        dateElement.classList.add("date");
+        dateElement.textContent = `Date: ${feedback.date}`;
+
+        feedbackItem.appendChild(ratingElement);
+        feedbackItem.appendChild(commentElement);
+        feedbackItem.appendChild(dateElement);
+
+        feedbackGallery.appendChild(feedbackItem);
+      });
+    }
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        selectedRating = star.getAttribute("data-value");
+        stars.forEach(s => s.classList.remove("selected"));
+        star.classList.add("selected");
+        for (let i = 0; i < selectedRating; i++) {
+          stars[i].classList.add("selected");
+        }
+      });
+    });
+
+    function submitRating() {
+      const feedback = document.getElementById("feedback").value;
+      if (selectedRating === 0) {
+        alert("Please select a rating before submitting.");
+        return;
+      }
+      if (feedback.trim() === "") {
+        alert("Please provide your feedback before submitting.");
+        return;
+      }
+
+      const feedbackItem = document.createElement("div");
+      feedbackItem.classList.add("feedback-item");
+
+      const ratingElement = document.createElement("div");
+      ratingElement.classList.add("rating");
+      ratingElement.textContent = `Rating: ${"★".repeat(selectedRating)}${"☆".repeat(5 - selectedRating)}`;
+
+      const commentElement = document.createElement("div");
+      commentElement.classList.add("comment");
+      commentElement.textContent = feedback;
+
+      const dateElement = document.createElement("div");
+      dateElement.classList.add("date");
+      dateElement.textContent = `Date: ${new Date().toISOString().split("T")[0]}`;
+
+      feedbackItem.appendChild(ratingElement);
+      feedbackItem.appendChild(commentElement);
+      feedbackItem.appendChild(dateElement);
+
+      feedbackGallery.appendChild(feedbackItem);
+
+      document.getElementById("thankYouMessage").style.display = "block";
+      setTimeout(() => {
+        document.getElementById("thankYouMessage").style.display = "none";
+        document.getElementById("feedback").value = "";
+        stars.forEach(s => s.classList.remove("selected"));
+        selectedRating = 0;
+      }, 3000);
+    }
+
+    // Load historical feedback on page load
+    window.onload = displayHistoricalFeedback;
+  </script>
+</body>
+</html>

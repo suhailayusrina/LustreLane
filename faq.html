@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ's - Lustre Lane</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FDF9F6;
+      color: #5C4033;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .faq {
+      border-bottom: 1px solid #D9BB9B;
+      padding: 15px 0;
+      cursor: pointer;
+    }
+    .faq:last-child {
+      border-bottom: none;
+    }
+    .faq h3 {
+      font-size: 18px;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq p {
+      margin-top: 10px;
+      font-size: 16px;
+      line-height: 1.5;
+      display: none;
+      color: #5C4033;
+    }
+    .icon {
+      font-size: 16px;
+      transition: transform 0.3s ease;
+    }
+    .icon.open {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq" onclick="toggleFAQ(this)">
+      <h3>What is Lustre Lane? <span class="icon">▼</span></h3>
+      <p>Lustre Lane is your go-to blog for everything about jewelry—trends, styling tips, maintenance guides, and more!</p>
+    </div>
+    <div class="faq" onclick="toggleFAQ(this)">
+      <h3>What type of jewelry content can I find here? <span class="icon">▼</span></h3>
+      <p>We cover a wide range of topics including the latest jewelry trends, how to care for your precious pieces, and expert advice on styling them for various occasions.</p>
+    </div>
+    <div class="faq" onclick="toggleFAQ(this)">
+      <h3>Do you sell jewelry? <span class="icon">▼</span></h3>
+      <p>Lustre Lane is a blog and does not sell jewelry directly. However, we provide trusted recommendations and reviews to help you shop confidently.</p>
+    </div>
+    <div class="faq" onclick="toggleFAQ(this)">
+      <h3>Can I contribute to Lustre Lane? <span class="icon">▼</span></h3>
+      <p>Yes! We welcome guest writers who are passionate about jewelry. Feel free to contact us for more details.</p>
+    </div>
+    <div class="faq" onclick="toggleFAQ(this)">
+      <h3>How can I care for my jewelry? <span class="icon">▼</span></h3>
+      <p>Check out our in-depth guides on cleaning and storing different types of jewelry to keep them shining for years to come!</p>
+    </div>
+  </div>
+  <script>
+    function toggleFAQ(faqElement) {
+      const answer = faqElement.querySelector('p');
+      const icon = faqElement.querySelector('.icon');
+
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        icon.classList.remove('open');
+      } else {
+        answer.style.display = 'block';
+        icon.classList.add('open');
+      }
+    }
+  </script>
+</body>
+</html>

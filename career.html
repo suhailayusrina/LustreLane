@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career - Lustre Lane</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .career-page {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #5C4033;  /* Your theme color */
+    }
+
+    h2 {
+      color: #D9BB9B;  /* Your theme color */
+    }
+
+    .positions-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .positions-list li {
+      background-color: #f0f0f0;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 4px;
+    }
+
+    .contact-section {
+      margin-top: 30px;
+    }
+
+    form {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #5C4033;  /* Your theme color */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #D9BB9B;  /* Your theme color */
+    }
+  </style>
+</head>
+<body>
+  <div class="career-page">
+    <h1>Career Opportunities</h1>
+
+    <h2>Open Positions</h2>
+    <ul class="positions-list">
+      <li>Accountant</li>
+      <li>Sales Marketing</li>
+      <li>Designer Assistant</li>
+    </ul>
+
+    <div class="contact-section">
+      <h2>Contact Us</h2>
+      <p>If you're interested in any of these positions, please send us your resume/CV:</p>
+      
+      <form action="mailto:example@email.com" method="post" enctype="text/plain">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <input type="submit" value="Send Email">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

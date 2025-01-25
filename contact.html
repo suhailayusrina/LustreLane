@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Lustre Lane</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 80px;
+            box-sizing: border-box;
+            background-color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	    position: fixed;
+    	    top: 0; 
+    	    left: 0; 
+   	    width: 100%;
+	    z-index: 1000;
+        }
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #5C4033;
+            font-family: Segoe Script;
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+	    margin-right: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+	nav a:hover {
+   	    color: #5C4033; 
+    	    text-decoration: underline; 
+    	    text-decoration-color: #5C4033; 
+    	    text-underline-offset: 3px; 
+        }
+	.hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-nav a {
+            font-size: 18px;
+            text-align: left;
+        }
+    </style>
+</head>
+<head>
+    <link rel="icon" href="imagefinal/lustre.jpg" type="image/jpeg">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo animate-on-scroll">
+            <img src="imagefinal/lustre.jpg" alt="Logo">
+            Lustre Lane.
+        </div>
+        <nav class="logo animate-on-scroll">
+            <a href="index.html">Blog</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="collections.html">Collections</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileNav.style.display = mobileNav.classList.contains('active') ? 'flex' : 'none';
+        });
+    </script>
