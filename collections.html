@@ -6,7 +6,7 @@
     <title>Lustre Collections</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-	body {
+  body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding-top: 80px;
@@ -23,12 +23,12 @@
             padding: 20px;
             background-color: #fff;
             border-bottom: 2px solid #ddd;
-	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-	    position: fixed;
-    	    top: 0; 
-    	    left: 0; 
-   	    width: 100%;
-	    z-index: 1000;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      position: fixed;
+          top: 0; 
+          left: 0; 
+         width: 100%;
+      z-index: 1000;
         }
         .logo {
             font-size: 30px;
@@ -46,7 +46,7 @@
             display: flex;
             gap: 30px;
             align-items: center;
-	    margin-right: 30px;
+      margin-right: 30px;
         }
 
         nav a {
@@ -55,13 +55,13 @@
             font-size: 14px;
             transition: color 0.3s ease;
         }
-	nav a:hover {
-   	    color: #5C4033; 
-    	    text-decoration: underline; 
-    	    text-decoration-color: #5C4033; 
-    	    text-underline-offset: 3px; 
+  nav a:hover {
+         color: #5C4033; 
+          text-decoration: underline; 
+          text-decoration-color: #5C4033; 
+          text-underline-offset: 3px; 
         }
-	.hamburger {
+  .hamburger {
             display: none;
             font-size: 24px;
             cursor: pointer;
@@ -85,7 +85,7 @@
             text-align: left;
         }
 
-	.video-container {
+  .video-container {
             display: flex;
             gap: 0px;
             justify-content: center; 
@@ -95,8 +95,8 @@
             width: 800px;
             height: auto;
             background: black;
-	}
-	.slider-container {
+  }
+  .slider-container {
             width: 100%;
             max-width: 400px; 
             overflow: hidden;
@@ -108,7 +108,7 @@
         .slider-wrapper {
             display: flex;
             transition: transform 0.5s ease-in-out;
-	    gap: 0px;
+      gap: 0px;
         }
 
         .slider-wrapper img {
@@ -153,19 +153,17 @@
             text-align: center;
             transition: transform 0.3s ease;
         }
-
-        .card img {
+.card img {
             width: 100%;
             height: auto;
             object-fit: cover;
         }
-
-        .card .card-text {
+.card .card-text {
             padding: 15px;
             font-size: 14px;
             font-weight: bold;
             color: #5C4033;
-	    font-family: Brush Script MTS;
+      font-family: Brush Script MTS;
         }
 
         .card:hover {
@@ -228,14 +226,14 @@
             text-align: center;
             flex: 1;
             min-width: 150px;
-	    transition: transform 0.8s ease;
-	}
-	.feature:hover {
+      transition: transform 0.8s ease;
+  }
+  .feature:hover {
             transform: scale(1.2);
         }
         .feature i {
             font-size: 2rem;
-	    color: #5C4033;
+      color: #5C4033;
             margin-bottom: 0.5rem;
         }
         .feature h3 {
@@ -356,14 +354,82 @@ footer {
     .features {
         flex-direction: column;
     }
-
-    .slider-container {
+.slider-container {
         max-width: 100%;
     }
-
-    footer .footer-container {
+footer .footer-container {
         flex-direction: column;
         text-align: center;
+    }
+}
+.countdown {
+    background: linear-gradient(145deg, #f9f2d8, #f4e1b0, #d1b582); /* Softer golden gradient */
+    border: 2px solid #d1b582;
+    padding: 40px 60px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+    color: #3e2a47;
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    margin: 0 auto;
+}
+
+.countdown h1 {
+    font-size: 30px;
+    color: #4B3C3B; /* Darker, refined color */
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.time {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.time div {
+    background: linear-gradient(145deg, #f9f2d8, #f4e1b0, #d1b582); /* Softer golden gradient */
+    color: #3e2a47;
+    border: 2px solid #d1b582;
+    padding: 20px 30px;
+    border-radius: 20px;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.time div:hover {
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
+.time div span {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    color: #654321; /* White text for contrast */
+}
+
+.time div small {
+    font-size: 16px;
+    font-weight: normal;
+    color: #3e2a47; /* Dark color for text labels */
+}
+
+@media (max-width: 600px) {
+    .countdown {
+        padding: 25px 40px;
+    }
+
+    .time div {
+        padding: 12px 18px;
+    }
+
+    .time div span {
+        font-size: 32px;
     }
 }
     </style>
@@ -404,11 +470,11 @@ footer {
 <center><div class="video-container animate-on-scroll">
         <video class="video" muted playsinline loop data-aos="fade-up">
             <source src="videofinal/jewel2.mp4" type="video/mp4">
-	    <source src="videofinal/jewel2.ogg" type="video/ogg">
+      <source src="videofinal/jewel2.ogg" type="video/ogg">
         </video>
         <video class="video" muted playsinline loop data-aos="fade-up">
             <source src="videofinal/jewel.mp4" type="video/mp4">
-	    <source src="videofinal/jewel.ogg" type="video/ogg">
+      <source src="videofinal/jewel.ogg" type="video/ogg">
         </video>
     </div></center>
 
@@ -429,6 +495,38 @@ footer {
         videos.forEach((video) => {
             observer.observe(video);
         });
+      function startCountdown(endDate) {
+            const timer = document.getElementById('timer');
+function updateTimer() {
+                const now = new Date();
+                const timeLeft = new Date(endDate) - now;
+
+                if (timeLeft > 0) {
+                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+                    const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+                    const seconds = Math.floor((timeLeft / 1000) % 60);
+
+                    timer.innerHTML = `
+                        <div><span>${days}</span><small>Days</small></div>
+                        <div><span>${hours}</span><small>Hours</small></div>
+                        <div><span>${minutes}</span><small>Minutes</small></div>
+                        <div><span>${seconds}</span><small>Seconds</small></div>
+                    `;
+                } else {
+                    timer.innerHTML = "<h2>Your Journey Begins Now!</h2>";
+                    clearInterval(interval);
+                }
+            }
+
+            updateTimer();
+            const interval = setInterval(updateTimer, 1000);
+        }
+
+        window.onload = function() {
+            const countdownEndDate = "2025-02-23T23:59:59"; 
+            startCountdown(countdownEndDate);
+        };
     </script>
 <br>
 <br>
@@ -460,7 +558,7 @@ footer {
             <span class="dot"></span>
             <span class="dot"></span>
             <span class="dot"></span>
-            <span class="dot"></span>	    
+            <span class="dot"></span>      
         </div>
     </div>
 
@@ -469,14 +567,13 @@ footer {
         const sliderWrapper = document.getElementById("sliderWrapper");
         const dots = document.querySelectorAll(".dot");
         let currentIndex = 0;
-
-        function showSlide(index) {
+function showSlide(index) {
             // Ensure index wraps around
             currentIndex = index < 0 ? dots.length - 1 : index % dots.length;
             
             // Move slider
             const offset = -currentIndex * 100;
-            sliderWrapper.style.transform = `translateX(${offset}%)`;
+            sliderWrapper.style.transform = translateX(${offset}%);
 
             // Update active dot
             dots.forEach(dot => dot.classList.remove("active"));
@@ -501,7 +598,6 @@ footer {
             });
         });
     </script>
-
 <br>
     <section class="history-section" id="history">
         <div class="history-content">
@@ -518,6 +614,10 @@ Our collection includes a stunning variety of jewelry that caters to every occas
         </div>
     </section>
 <br>
+    <center><div class="countdown">
+        <h1>Regalia Veritas</h1>
+        <div id="timer" class="time"></div>
+    </div></center>
 <br>
 <br>
     <div class="card-container">
@@ -532,7 +632,8 @@ Our collection includes a stunning variety of jewelry that caters to every occas
         <div class="card">
             <img src="imagefinal/anting4.jpg" alt="Image 3">
             <div class="card-text">Pearly Earings</div>
-        </div>
+
+</div>
         <div class="card">
             <img src="imagefinal/anting2.jpg" alt="Image 4">
             <div class="card-text">Daisy Earings</div>
@@ -542,8 +643,7 @@ Our collection includes a stunning variety of jewelry that caters to every occas
             <div class="card-text">Elena Earings</div>
         </div>
     </div>
-
-    <div class="card-container animate-on-scroll">
+<div class="card-container animate-on-scroll">
         <div class="card">
             <img src="imagefinal/ring.jpg" alt="Image 1">
             <div class="card-text">Elegant Earrings</div>
@@ -633,11 +733,9 @@ Our collection includes a stunning variety of jewelry that caters to every occas
     </div>
 <br>
 <br>
-
 <center><a href="shop.html" class="shop-now-btn animate-on-scroll">
     Shop Now <span class="arrow">&rarr;</span>
 </a></center>
-
 <br>
 <div class="container">
         <div class="features">
@@ -748,8 +846,7 @@ Our collection includes a stunning variety of jewelry that caters to every occas
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Back to Top Button</title>
   <style>
-
-    /* Back to Top Button Style */
+/* Back to Top Button Style */
     .back-to-top {
       position: fixed;
       bottom: 20px;
@@ -800,3 +897,4 @@ Our collection includes a stunning variety of jewelry that caters to every occas
   </script>
 </body>
 </html>
+
