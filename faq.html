@@ -5,13 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ's - Lustre Lane</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #FDF9F6;
-      color: #5C4033;
-      margin: 0;
-      padding: 0;
-    }
+	body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding-top: 80px;
+            box-sizing: border-box;
+            background-color: #D9BB9B;
+	    background-image: url(imagefinal/bgeffect.jpg');
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+	}
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 2px solid #ddd;
+	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	    position: fixed;
+    	    top: 0; 
+    	    left: 0; 
+   	    width: 100%;
+	    z-index: 1000;
+        }
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #5C4033;
+            font-family: Segoe Script;
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+	    margin-right: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            transition: color 0.3s ease;
+        }
+	nav a:hover {
+   	    color: #5C4033; 
+    	    text-decoration: underline; 
+    	    text-decoration-color: #5C4033; 
+    	    text-underline-offset: 3px; 
+        }
+	.hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .mobile-nav {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            position: absolute;
+            top: 80px;
+            left: 0;
+            background-color: white;
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .mobile-nav a {
+            font-size: 18px;
+            text-align: left;
+        }
+
     .container {
       max-width: 800px;
       margin: 50px auto;
@@ -57,27 +129,77 @@
   </style>
 </head>
 <body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo animate-on-scroll">
+            <img src="imagefinal/lustre.jpg" alt="Logo">
+            Lustre Lane.
+        </div>
+        <nav class="logo animate-on-scroll">
+            <a href="blog.html">Blog</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="collections.html">Collections</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileNav.style.display = mobileNav.classList.contains('active') ? 'flex' : 'none';
+        });
+    </script>
+
   <div class="container">
     <h2>Frequently Asked Questions</h2>
     <div class="faq" onclick="toggleFAQ(this)">
       <h3>What is Lustre Lane? <span class="icon">▼</span></h3>
-      <p>Lustre Lane is your go-to blog for everything about jewelry—trends, styling tips, maintenance guides, and more!</p>
+      <p>Lustre Lane suggests a path or journey that leads to elegance, shine, or 	beauty. "Lustre" refers to a soft glow or sheen, often associated with 	polished surfaces like gemstones or jewelry, which emphasizes the 	luxurious and refined nature of the products. "Lane" evokes the idea of a 	distinct, exclusive space, inviting visitors to explore and experience 	something beautiful. Together, "Lustre Lane" could symbolize a place 	where beauty and sophistication meet, guiding people toward the world of 	fine, radiant jewelry.</p>
     </div>
     <div class="faq" onclick="toggleFAQ(this)">
-      <h3>What type of jewelry content can I find here? <span class="icon">▼</span></h3>
-      <p>We cover a wide range of topics including the latest jewelry trends, how to care for your precious pieces, and expert advice on styling them for various occasions.</p>
+      <h3>What type of jewellery content can I find here? <span class="icon">▼</span></h3>
+      <p>We cover a wide range of topics including the latest jewelry trends, how to care for your precious pieces, and expert advice on styling them for various occasions. You can also buy a few limited design that might attract your attention through this blog.</p>
     </div>
     <div class="faq" onclick="toggleFAQ(this)">
-      <h3>Do you sell jewelry? <span class="icon">▼</span></h3>
-      <p>Lustre Lane is a blog and does not sell jewelry directly. However, we provide trusted recommendations and reviews to help you shop confidently.</p>
+      <h3>Do you sell jewellery? <span class="icon">▼</span></h3>
+      <p>Lustre Lane is a brand that specialized in jewellery. Hence, you can buy our unlimited design at the business website. However, you are currently visiting our blog where we shared information about the business and educating visitors about the depth of jewellery. Moreover, we provide trusted recommendations and reviews to help you shop confidently with our brand.</p>
     </div>
+    <div class="faq" onclick="toggleFAQ(this)">
+      <h3>What are the material of your jewellery? Is it hypoallergenic? <span class="icon">▼</span></h3>
+      <p>Our jewelry is crafted using high-quality materials such as sterling silver, 14k and 18k gold, stainless steel, and occasionally plated metals. We also incorporate gemstones, crystals, and pearls, both natural and cultured.
+Most of our designs are hypoallergenic, as we prioritize using nickel-free and lead-free materials, making them suitable for sensitive skin. However, for individuals with extreme sensitivities, we recommend opting for our solid gold or stainless steel pieces for the highest level of comfort.
+If you have specific allergies or concerns, feel free to reach out, and we’ll be happy to assist you in finding the perfect piece!</p>
+    </div>
+    <div class="faq" onclick="toggleFAQ(this)">
+      <h3>Do you offer custom-made or personalized jewelry?<span class="icon">▼</span></h3>
+      <p>Yes, we offer custom-made and personalized jewelry to help you create a one-of-a-kind piece that reflects your style and story. Whether you want to engrave a name, date, or special message, or design a unique piece from scratch, we’re here to bring your vision to life. Our custom jewelry service allows you to choose the materials, gemstones, and design elements to make your piece truly special. Simply reach out to us with your idea, and we’ll guide you through the process, from initial design to the finished product. Please note that we will not receive online custom order. Custom orders only available on store and may require additional time to craft, and pricing will vary depending on the complexity of the design.</p>
+    </div>
+<div class="faq" onclick="toggleFAQ(this)">
+  <h3>How can I care for my jewellery? <span class="icon">▼</span></h3>
+  <p>
+    There are different ways to clean jewellery based on the design and material of the pieces that you are wearing. Check out our in-depth guides on cleaning and storing different types of jewellery to keep them shining for years to come!</p> 
+
+</div>
+<div class="faq" onclick="toggleFAQ(this)">
+  <h3>Can I visit your store in person?<span class="icon">▼</span></h3>
+  <p>You can definitely view and purchase our jewelry in person for a better experience. You can visit our store any day from 10 A.M until 10 P.M at 69, Jalan Maarof, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur.</p>
+</div>
+<div class="faq" onclick="toggleFAQ(this)">
+  <h3>Do you offer gift wrapping or packaging?<span class="icon">▼</span></h3>
+  <p>Yes, all our jewelry comes beautifully packaged in elegant, secure boxes that are perfect for gifting. We also offer a gift-wrapping service, which includes premium wrapping paper and a personalized note for an extra special touch.</p>
+</div>
+<div class="faq" onclick="toggleFAQ(this)">
+  <h3>Do you offer a jewellery repair service?<span class="icon">▼</span></h3>
+  <p>Lustre Lane does not offer a repair service for jewellery. However, you can trade your old Lustre Lane jewellery to a new one suitable with your desired design as by trading, you can get a good price for the new piece. Come visit our store now!</p>
+</div>
     <div class="faq" onclick="toggleFAQ(this)">
       <h3>Can I contribute to Lustre Lane? <span class="icon">▼</span></h3>
-      <p>Yes! We welcome guest writers who are passionate about jewelry. Feel free to contact us for more details.</p>
+      <p>Yes! We welcome guest writers who are passionate and specialized in jewelry. Feel free to contact us for more details.</p>
     </div>
-    <div class="faq" onclick="toggleFAQ(this)">
-      <h3>How can I care for my jewelry? <span class="icon">▼</span></h3>
-      <p>Check out our in-depth guides on cleaning and storing different types of jewelry to keep them shining for years to come!</p>
     </div>
   </div>
   <script>

@@ -10,9 +10,12 @@
             margin: 0;
             padding-top: 80px;
             box-sizing: border-box;
-            background-color: #fff;
+   	    background-image: url('imagefinal/bgeffect.jpg');
             overflow-x: hidden;
             scroll-behavior: smooth;
+    	    background-size: 100% 100%; 
+     	    background-position: center center;
+     	    background-attachment: fixed;
         }
 
         header {
@@ -21,14 +24,15 @@
             align-items: center;
             padding: 20px;
             background-color: #fff;
-            border-bottom: 1px solid #ddd;
-	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-	    position: fixed;
-    	    top: 0; 
-    	    left: 0; 
-   	    width: 100%;
-	    z-index: 1000;
+            border-bottom: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0; 
+            left: 0; 
+            width: 100%;
+            z-index: 1000;
         }
+
         .logo {
             font-size: 30px;
             font-weight: bold;
@@ -45,7 +49,7 @@
             display: flex;
             gap: 30px;
             align-items: center;
-	    margin-right: 30px;
+            margin-right: 30px;
         }
 
         nav a {
@@ -53,14 +57,17 @@
             color: black;
             font-size: 14px;
             transition: color 0.3s ease;
+            font-family: Segoe Script;
         }
-	nav a:hover {
-   	    color: #5C4033; 
-    	    text-decoration: underline; 
-    	    text-decoration-color: #5C4033; 
-    	    text-underline-offset: 3px; 
+
+        nav a:hover {
+            color: #5C4033;
+            text-decoration: underline;
+            text-decoration-color: #5C4033;
+            text-underline-offset: 3px;
         }
-	.hamburger {
+
+        .hamburger {
             display: none;
             font-size: 24px;
             cursor: pointer;
@@ -83,25 +90,176 @@
             font-size: 18px;
             text-align: left;
         }
+
+        .contact-section {
+            background-color: #fff;
+            padding: 60px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(6, 6, 6, 1.0);
+            margin-top: 100px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #5C4033;
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info div {
+            flex: 1;
+            margin-right: 30px;
+        }
+
+        .contact-info div:last-child {
+            margin-right: 0;
+        }
+
+        h3 {
+            color: #5C4033;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .table-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin: 0 auto;
+            margin-top: 30px;
+    	    background-color: #f4f4f4;
+            box-shadow: 0 4px 10px rgba(6, 6, 6, 1.0);
+        }
+
+        th, td {
+            border: 1px solid #5C4033;
+            padding: 12px 20px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #5C4033;
+            color: white;
+            font-size: 16px;
+        }
+
+        td {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .social-media a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #5C4033;
+            font-size: 19px;
+            transition: color 0.3s ease;
+        }
+
+        .social-media a:hover {
+            color: #333;
+        }
+
+        .map-container {
+            margin-top: 40px;
+            height: 400px;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .contact-details {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .contact-details a {
+            color: #5C4033;
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile view */
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+            }
+
+            .contact-info div {
+                margin-bottom: 30px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            .mobile-nav.active {
+                display: flex;
+            }
+        }
     </style>
-</head>
-<head>
-    <link rel="icon" href="imagefinal/lustre.jpg" type="image/jpeg">
 </head>
 <body>
     <!-- Header Section -->
     <header>
         <div class="logo animate-on-scroll">
             <img src="imagefinal/lustre.jpg" alt="Logo">
-            Lustre Lane.
+            Lustre Lane
         </div>
         <nav class="logo animate-on-scroll">
-            <a href="index.html">Blog</a>
+            <a href="blog.html">Blog</a>
             <a href="aboutus.html">About Us</a>
             <a href="collections.html">Collections</a>
             <a href="shop.html">Shop</a>
             <a href="contact.html">Contact</a>
         </nav>
+        <div class="hamburger" id="hamburger">☰</div>
+        <div class="mobile-nav" id="mobile-nav">
+            <a href="blog.html">Blog</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="collections.html">Collections</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </header>
 
     <script>
@@ -113,3 +271,79 @@
             mobileNav.style.display = mobileNav.classList.contains('active') ? 'flex' : 'none';
         });
     </script>
+
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+
+        <div class="contact-details">
+            <h3>Get In Touch</h3>
+            <p>Email: <a href="mailto:lustrecareer@gmail.com">lustrelane@gmail.com</a></p>
+            <p>Phone: <a href="tel:+07234567890">+07 234 567 890</a></p>
+        </div>
+
+        <div class="social-media">
+            <a href="https://www.instagram.com/sdntwg?igsh=OWp6a3UyZGU2d2Nn&utm_source=qr" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/sdntwg?igsh=OWp6a3UyZGU2d2Nn&utm_source=qr" target="_blank">Instagram</a>
+            <a href="https://twitter.com/lustrelane" target="_blank">Twitter</a>
+        </div>
+
+        <div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.746883104994!2d101.6706432152555!3d3.130532303257053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc49af52933f47%3A0xab8710a0c097422b!2sCommune+%28KL%29!5e0!3m2!1sen!2smy!4v1674518678429!5m2!1sen!2smy" allowfullscreen="" loading="lazy"></iframe>
+
+        </div>
+
+        <div class="contact-info">
+                <h3>Outlet</h3>
+                <p>69, Jalan Maarof, Bangsar, 59100 Kuala Lumpur,<br>Wilayah Persekutuan Kuala Lumpur, Malaysia</p>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h3>Operation Hours</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td> 🕒 10:00 AM - 10:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td> 🕒 10:00 AM - 10:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td> 🕒 10:00 AM - 10:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td> 🕒 10:00 AM - 10:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td> 🕒 10:00 AM - 10:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td> 🕒 9:30 AM - 9:30 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td> 🕒 9:30 AM - 9:30 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<br>
+<br>
+<br>
+
+</body>
+</html>

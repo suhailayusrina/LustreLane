@@ -23,7 +23,7 @@
             align-items: center;
             padding: 20px;
             background-color: #fff;
-            border-bottom: 2px solid #ddd;
+            border-bottom: 1px solid #ddd;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             position: fixed;
             top: 0; 
@@ -48,6 +48,7 @@
         nav {
             display: flex;
             gap: 30px;
+    	    transition: color 10s ease;
             align-items: center;
             margin-right: 30px;
         }
@@ -57,6 +58,7 @@
             color: black;
             font-size: 14px;
             transition: color 0.3s ease;
+	    font-family: Segoe Script;
         }
         nav a:hover {
             color: #5C4033; 
@@ -77,13 +79,15 @@
             padding: 20px;
             box-sizing: border-box;
             margin: 10px;
-            border: 1px solid #5C4033;
+            border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);
             text-align: center;
             background-color: #ffff;
         }
-
+	.product:hover {
+	    border: 2px solid #5C4033;
+	}
         .product img {
             max-width: 100%;
             height: auto;
@@ -115,6 +119,7 @@
         .product button:hover {
             background-color: #5C4033;
             color: #fff;
+     
         }
 
         .cart, .checkout {
@@ -168,12 +173,15 @@
             text-align: left;
         }
         .sale-marquee {
-            background-color: #D2AF37;
-            color: #5C4033;
+            background-color: #B28B62;
+            color: #FFFDD0;
             font-size: 18px;
             font-weight: bold;
             text-align: center;
             padding: 10px 0;
+	    width: 100%;
+   	    margin: 0;   
+    	    box-sizing: border-box;
         }
 
         .receipt {
@@ -239,14 +247,14 @@
     </style>
 </head>
 <body>
-
+    <!-- Header Section -->
     <header>
         <div class="logo animate-on-scroll">
             <img src="imagefinal/lustre.jpg" alt="Logo">
             Lustre Lane.
         </div>
-        <nav>
-            <a href="index.html">Blog</a>
+        <nav class="logo animate-on-scroll">
+            <a href="blog.html">Blog</a>
             <a href="aboutus.html">About Us</a>
             <a href="collections.html">Collections</a>
             <a href="shop.html">Shop</a>
@@ -254,12 +262,23 @@
         </nav>
     </header>
 
-    <div class="content">
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            mobileNav.style.display = mobileNav.classList.contains('active') ? 'flex' : 'none';
+        });
+    </script>
+
+    <div class="content animate-on-scroll">
         <h2>Jewellery Catalogue</h2>
 
         <div class="sale-marquee">
             <marquee behavior="scroll" direction="left" scrollamount="8">🎉 Sale 20% OFF Every Saturday! 🎉 | Go grab yours now! | 🎉 Sale 20% OFF Every Saturday! 🎉</marquee>
         </div>
+<br>
 
         <div class="product">
             <img src="imagefinal/banglegold.jpg" alt="Ring">
@@ -344,10 +363,17 @@
             <h3>Silver Bracelet</h3>
             <p>RM49.00</p>
             <select>
-                <option value="size">Choose</option>
-                <option value="small">Gold</option>
-                <option value="medium">Silver</option>
-                <option value="large">Rose Gold</option>
+                <option value="size">Choose size</option>
+                <option value="small">3</option>
+                <option value="medium">3.5</option>
+                <option value="large">4</option>
+                <option value="large">4.5</option>
+                <option value="large">5.5</option>
+                <option value="large">6</option>
+                <option value="large">6.5</option>
+	        <option value="large">7</option>
+	        <option value="large">6.5</option>
+
             </select>
             <button onclick="addToCart('Silver Bracelet', 49.00)">Add to Cart</button>
         </div>
@@ -357,10 +383,16 @@
             <h3>Silver Bracelet</h3>
             <p>RM90.99</p>
             <select>
-                <option value="size">Choose</option>
-                <option value="small">Gold</option>
-                <option value="medium">Silver</option>
-                <option value="large">Rose Gold</option>
+                <option value="size">Choose size</option>
+                <option value="small">3</option>
+                <option value="medium">3.5</option>
+                <option value="large">4</option>
+                <option value="large">4.5</option>
+                <option value="large">5.5</option>
+                <option value="large">6</option>
+                <option value="large">6.5</option>
+	        <option value="large">7</option>
+	        <option value="large">6.5</option>
             </select>
             <button onclick="addToCart('Silver Bracelet', 90.99)">Add to Cart</button>
         </div>
@@ -370,10 +402,16 @@
             <h3>Silver Bracelet</h3>
             <p>RM40.50</p>
             <select>
-                <option value="size">Choose</option>
-                <option value="small">Gold</option>
-                <option value="medium">Silver</option>
-                <option value="large">Rose Gold</option>
+                <option value="size">Choose size</option>
+                <option value="small">3</option>
+                <option value="medium">3.5</option>
+                <option value="large">4</option>
+                <option value="large">4.5</option>
+                <option value="large">5.5</option>
+                <option value="large">6</option>
+                <option value="large">6.5</option>
+	        <option value="large">7</option>
+	        <option value="large">6.5</option>
             </select>
             <button onclick="addToCart('Silver Bracelet', 40.50)">Add to Cart</button>
         </div>
@@ -383,10 +421,16 @@
             <h3>Silver Bracelet</h3>
             <p>RM39.00</p>
             <select>
-                <option value="size">Choose</option>
-                <option value="small">Gold</option>
-                <option value="medium">Silver</option>
-                <option value="large">Rose Gold</option>
+                <option value="size">Choose size</option>
+                <option value="small">3</option>
+                <option value="medium">3.5</option>
+                <option value="large">4</option>
+                <option value="large">4.5</option>
+                <option value="large">5.5</option>
+                <option value="large">6</option>
+                <option value="large">6.5</option>
+	        <option value="large">7</option>
+	        <option value="large">6.5</option>
             </select>
             <button onclick="addToCart('Silver Bracelet', 39.00)">Add to Cart</button>
         </div>
@@ -396,10 +440,16 @@
             <h3>Silver Bracelet</h3>
             <p>RM39.00</p>
             <select>
-                <option value="size">Choose</option>
-                <option value="small">Gold</option>
-                <option value="medium">Silver</option>
-                <option value="large">Rose Gold</option>
+                <option value="size">Choose size</option>
+                <option value="small">3</option>
+                <option value="medium">3.5</option>
+                <option value="large">4</option>
+                <option value="large">4.5</option>
+                <option value="large">5.5</option>
+                <option value="large">6</option>
+                <option value="large">6.5</option>
+	        <option value="large">7</option>
+	        <option value="large">6.5</option>
             </select>
             <button onclick="addToCart('Silver Bracelet', 39.00)">Add to Cart</button>
         </div>
@@ -409,10 +459,16 @@
             <h3>Silver Bracelet</h3>
             <p>RM39.00</p>
             <select>
-                <option value="size">Choose</option>
-                <option value="small">Gold</option>
-                <option value="medium">Silver</option>
-                <option value="large">Rose Gold</option>
+                <option value="size">Choose size</option>
+                <option value="small">3</option>
+                <option value="medium">3.5</option>
+                <option value="large">4</option>
+                <option value="large">4.5</option>
+                <option value="large">5.5</option>
+                <option value="large">6</option>
+                <option value="large">6.5</option>
+	        <option value="large">7</option>
+	        <option value="large">6.5</option>
             </select>
             <button onclick="addToCart('Silver Bracelet', 39.00)">Add to Cart</button>
         </div>

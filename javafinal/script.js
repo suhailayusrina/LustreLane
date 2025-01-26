@@ -73,3 +73,75 @@
       });
     });
   </script>
+
+  <script>
+    function toggleFAQ(faqElement) {
+      const answer = faqElement.querySelector('p');
+      const icon = faqElement.querySelector('.icon');
+
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        icon.classList.remove('open');
+      } else {
+        answer.style.display = 'block';
+        icon.classList.add('open');
+      }
+    }
+  </script>
+<script>
+        // Function to check if an element is in the viewport
+        const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+        function checkVisibility() {
+            elementsToAnimate.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Listen for scroll events to check visibility
+        window.addEventListener('scroll', checkVisibility);
+
+        // Call the function on page load to check for already visible elements
+        window.addEventListener('load', checkVisibility);
+    </script>
+<script>
+        // Function to check if an element is in the viewport
+        const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+        function checkVisibility() {
+            elementsToAnimate.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Listen for scroll events to check visibility
+        window.addEventListener('scroll', checkVisibility);
+
+        // Call the function on page load to check for already visible elements
+        window.addEventListener('load', checkVisibility);
+    </script>
+<script>
+        // Function to check if an element is in the viewport
+        const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+
+        function checkVisibility() {
+            elementsToAnimate.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Listen for scroll events to check visibility
+        window.addEventListener('scroll', checkVisibility);
+
+        // Call the function on page load to check for already visible elements
+        window.addEventListener('load', checkVisibility);
+    </script>
